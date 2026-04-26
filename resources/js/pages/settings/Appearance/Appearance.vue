@@ -3,9 +3,9 @@ import { Head } from '@inertiajs/vue3';
 import Heading from '@/components/atoms/Heading.vue';
 import AppLayout from '@/layouts/AppLayout.vue';
 import SettingsLayout from '@/layouts/settings/Layout.vue';
-import AppearanceTabsField from '@/pages/settings/components/AppearanceTabsField.vue';
 import { edit } from '@/routes/appearance';
 import type { BreadcrumbItem } from '@/types';
+import AppearanceTabsField from './AppearanceTabsField.vue';
 
 const breadcrumbItems: BreadcrumbItem[] = [
     {

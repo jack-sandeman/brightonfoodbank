@@ -9,9 +9,9 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import AppLayout from '@/layouts/AppLayout.vue';
 import SettingsLayout from '@/layouts/settings/Layout.vue';
-import DeleteUserSection from '@/pages/settings/components/DeleteUserSection.vue';
 import { edit } from '@/routes/profile';
 import type { BreadcrumbItem } from '@/types';
+import DeleteUserSection from './DeleteUserSection.vue';
 
 type Props = {
     status?: string;

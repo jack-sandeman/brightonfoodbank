@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Head } from '@inertiajs/vue3';
+import DashboardPlaceholderPattern from '@/components/organisms/DashboardPlaceholderPattern.vue';
 import AppLayout from '@/layouts/AppLayout.vue';
-import PlaceholderPattern from '@/pages/dashboard/components/PlaceholderPattern.vue';
 import { dashboard } from '@/routes';
 import type { BreadcrumbItem } from '@/types';
 
@@ -24,23 +24,23 @@ const breadcrumbs: BreadcrumbItem[] = [
                 <div
                     class="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border"
                 >
-                    <PlaceholderPattern />
+                    <DashboardPlaceholderPattern />
                 </div>
                 <div
                     class="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border"
                 >
-                    <PlaceholderPattern />
+                    <DashboardPlaceholderPattern />
                 </div>
                 <div
                     class="relative aspect-video overflow-hidden rounded-xl border border-sidebar-border/70 dark:border-sidebar-border"
                 >
-                    <PlaceholderPattern />
+                    <DashboardPlaceholderPattern />
                 </div>
             </div>
             <div
                 class="relative min-h-[100vh] flex-1 rounded-xl border border-sidebar-border/70 md:min-h-min dark:border-sidebar-border"
             >
-                <PlaceholderPattern />
+                <DashboardPlaceholderPattern />
             </div>
         </div>
     </AppLayout>

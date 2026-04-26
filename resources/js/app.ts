@@ -6,12 +6,18 @@ import '../css/app.css';
 import { initializeTheme } from '@/composables/useAppearance';
 
 const appName = import.meta.env.VITE_APP_NAME || 'Laravel';
+const resolvePagePath = (name: string): string => {
+    const segments = name.split('/');
+    const pageName = segments[segments.length - 1];
+
+    return `./pages/${name}/${pageName}.vue`;
+};
 
 createInertiaApp({
     title: (title) => (title ? `${title} - ${appName}` : appName),
     resolve: (name) =>
         resolvePageComponent(
-            `./pages/${name}.vue`,
+            resolvePagePath(name),
             import.meta.glob<DefineComponent>('./pages/**/*.vue'),
         ),
     setup({ el, App, props, plugin }) {
