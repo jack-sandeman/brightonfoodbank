@@ -8,6 +8,7 @@ Route::middleware([
     ValidateSessionWithWorkOS::class,
 ])->group(function () {
     Route::inertia('/', 'Dashboard')->name('dashboard');
+    Route::inertia('/clients', 'Clients')->name('clients');
 });
 
 require __DIR__.'/settings.php';
