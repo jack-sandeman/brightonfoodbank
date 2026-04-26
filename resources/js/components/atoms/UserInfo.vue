@@ -17,6 +17,7 @@ const { getInitials } = useInitials();
 
 const displayName = computed(() => {
     const name = props.user.name?.trim();
+
     return name ? name : props.user.email;
 });
 

@@ -285,4 +285,16 @@ Wayfinder generates TypeScript functions for Laravel routes. Import from `@/acti
 
 Components should be like functions in that should do one thing. If components get too large or try to do too many things they should be broken down into smaller components.
 
+## Atomic component structure
+
+- Treat `resources/js/components/ui` as an external component library and exclude it from atomic classification.
+- Use this shared structure in `resources/js/components`: `atoms`, `molecules`, `organisms`, and `layouts`.
+- Atoms must not contain other components and must not contain business logic. EG base html element like label
+- Molecules may compose atoms and molecules but must not contain business logic. EG components that are reusable across the whole site like a breadcrumbs component
+- Organisms may compose molecules and can include limited business logic tied to page context while remaining reusable. The have a relationship with the page they are used on. EG a component that is specific to the page that it is on but is still reusable. Could be used to create a version of a molecule with specific preset props. EG ClientProfileForm (ClientProfile being the page it is used on)
+- Pages may compose any component and include business logic.
+- Page-local extracted components should be single-use and should live within the owning page directory.
+- Split non-atom components when they become too complex; use template length greater than approximately 100 lines as the default trigger.
+- If placement is ambiguous, ask before assigning the component to a layer.
+
 </laravel-boost-guidelines>

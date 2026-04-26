@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { Form } from '@inertiajs/vue3';
 import ProfileController from '@/actions/App/Http/Controllers/Settings/ProfileController';
-import Heading from '@/components/Heading.vue';
+import Heading from '@/components/atoms/Heading.vue';
 import { Button } from '@/components/ui/button';
 import {
     Dialog,

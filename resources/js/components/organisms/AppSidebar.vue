@@ -1,9 +1,9 @@
 <script setup lang="ts">
 import { Link } from '@inertiajs/vue3';
 import { LayoutGrid, Users } from 'lucide-vue-next';
-import AppLogo from '@/components/AppLogo.vue';
-import NavMain from '@/components/NavMain.vue';
-import NavUser from '@/components/NavUser.vue';
+import AppLogo from '@/components/molecules/AppLogo.vue';
+import NavMain from '@/components/organisms/NavMain.vue';
+import NavUser from '@/components/organisms/NavUser.vue';
 import {
     Sidebar,
     SidebarContent,
