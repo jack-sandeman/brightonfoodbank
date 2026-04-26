@@ -65,7 +65,7 @@ const columns: ColumnDef<ClientTableRow>[] = [
                 Button,
                 {
                     variant: 'ghost',
-                    class: 'px-0 hover:bg-transparent',
+                    class: 'cursor-pointer px-2 hover:bg-accent hover:text-accent-foreground',
                     onClick: (event: MouseEvent) => {
                         event.stopPropagation();
                         column.toggleSorting(column.getIsSorted() === 'asc');
@@ -90,7 +90,7 @@ const columns: ColumnDef<ClientTableRow>[] = [
                 Button,
                 {
                     variant: 'ghost',
-                    class: 'px-0 hover:bg-transparent',
+                    class: 'cursor-pointer px-2 hover:bg-accent hover:text-accent-foreground',
                     onClick: (event: MouseEvent) => {
                         event.stopPropagation();
                         column.toggleSorting(column.getIsSorted() === 'asc');
@@ -106,7 +106,7 @@ const columns: ColumnDef<ClientTableRow>[] = [
                 Button,
                 {
                     variant: 'ghost',
-                    class: 'px-0 hover:bg-transparent',
+                    class: 'cursor-pointer px-2 hover:bg-accent hover:text-accent-foreground',
                     onClick: (event: MouseEvent) => {
                         event.stopPropagation();
                         column.toggleSorting(column.getIsSorted() === 'asc');
@@ -130,6 +130,7 @@ const columns: ColumnDef<ClientTableRow>[] = [
                         variant: 'ghost',
                         size: 'icon-sm',
                         type: 'button',
+                        class: 'bg-accent text-accent-foreground hover:bg-accent/80',
                         'aria-label': `Edit ${row.original.name}`,
                         onClick: () => handleEdit(row.original),
                     },
@@ -138,9 +139,10 @@ const columns: ColumnDef<ClientTableRow>[] = [
                 h(
                     Button,
                     {
-                        variant: 'ghost',
+                        variant: 'destructive',
                         size: 'icon-sm',
                         type: 'button',
+                        class: 'bg-destructive text-destructive-foreground hover:bg-destructive/90',
                         'aria-label': `Delete ${row.original.name}`,
                         onClick: () => handleDelete(row.original),
                     },

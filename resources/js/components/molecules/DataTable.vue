@@ -164,7 +164,7 @@ const table = useVueTable({
 </script>
 
 <template>
-    <div class="space-y-4">
+    <div class="flex h-full min-h-[300px] flex-col gap-4">
         <div class="flex items-center justify-between gap-3">
             <Input
                 :model-value="props.globalFilter"
@@ -175,16 +175,14 @@ const table = useVueTable({
             <slot name="toolbar-actions" />
         </div>
 
-        <div class="rounded-md border">
+        <div class="min-h-[300px] flex-1 overflow-auto rounded-md border">
             <Table>
                 <TableHeader>
                     <TableRow v-for="headerGroup in table.getHeaderGroups()" :key="headerGroup.id">
                         <TableHead
                             v-for="header in headerGroup.headers"
                             :key="header.id"
-                            :class="
-                                header.column.getCanSort() ? 'cursor-pointer select-none' : ''
-                            "
+                            :class="header.column.getCanSort() ? 'cursor-pointer select-none' : ''"
                             @click="header.column.getToggleSortingHandler()?.($event)"
                         >
                             <FlexRender
@@ -203,7 +201,7 @@ const table = useVueTable({
                     </template>
                     <template v-else-if="table.getRowModel().rows.length">
                         <TableRow v-for="row in table.getRowModel().rows" :key="row.id">
-                            <TableCell v-for="cell in row.getVisibleCells()" :key="cell.id">
+                            <TableCell v-for="cell in row.getVisibleCells()" :key="cell.id" class="py-2">
                                 <FlexRender
                                     :render="cell.column.columnDef.cell"
                                     :props="cell.getContext()"
